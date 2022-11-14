@@ -1,0 +1,18 @@
+<h1>Contact</h1>
+
+<ol>
+  <% @contacts.each do |contact| %>
+    <li><%= contact %></li>
+  <%end%>
+</ol>
+
+<form action="/contact" method="get">
+  <input type="text"
+  name="member"
+  placeholder="Who are you looking for?"
+  value="<%= params[:member] %>"
+  >
+  <input type="submit">
+</form>
+
+<%= link_to "Homepage", root_path %>
